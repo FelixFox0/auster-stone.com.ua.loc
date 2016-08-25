@@ -22,6 +22,22 @@ function getURLVar(key) {
 	}
 }
 
+function refresh_kurs(new_kurs, category_id){
+//    console.log(new_kurs);
+    $.ajax({
+        url: 'index.php?route=catalog/kurs&token=' + getURLVar('token'),
+        dataType: 'html',
+        type: 'post',
+        data: 'new_kurs=' + new_kurs + '&category_id=' + category_id,
+        success: function(html) {
+           //console.log(html);
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
+}
+
 $(document).ready(function() {
 	//Form Submit for IE Browser
 	$('button[type=\'submit\']').on('click', function() {

@@ -727,7 +727,7 @@ class ControllerSaleOrder extends Controller {
 		}
 
 		$order_info = $this->model_sale_order->getOrder($order_id);
-
+//                var_dump($order_info);
 		if ($order_info) {
 			$this->load->language('sale/order');
 
@@ -867,6 +867,7 @@ class ControllerSaleOrder extends Controller {
 
 			$data['firstname'] = $order_info['firstname'];
 			$data['lastname'] = $order_info['lastname'];
+                        $data['fio'] = $order_info['fio'];
 
 			if ($order_info['customer_id']) {
 				$data['customer'] = $this->url->link('customer/customer/edit', 'token=' . $this->session->data['token'] . '&customer_id=' . $order_info['customer_id'], 'SSL');

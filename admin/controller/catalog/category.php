@@ -71,6 +71,13 @@ class ControllerCatalogCategory extends Controller {
 			if (isset($this->request->get['page'])) {
 				$url .= '&page=' . $this->request->get['page'];
 			}
+//                      Пересчет курса начало
+                        $this->load->model('catalog/kurs');
+                        $this->request->post['kurs']= str_replace(',', '.', $this->request->post['kurs']);
+                        foreach ($this->model_catalog_kurs->GetProductCategory($this->request->get['category_id']) as $value) {
+                            $this->model_catalog_kurs->editKursProduct($value['product_id'], $this->request->post['kurs']);
+                        }
+//                      Пересчет курса конец                        
 
 			$this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
@@ -547,7 +554,10 @@ class ControllerCatalogCategory extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
-
+                if(isset($this->request->get['category_id'])){
+                    $data['category_id'] = $this->request->get['category_id'];
+                }
+//                var_dump($data);
 		$this->response->setOutput($this->load->view('catalog/category_form.tpl', $data));
 	}
 

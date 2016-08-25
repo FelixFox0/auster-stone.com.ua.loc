@@ -809,50 +809,50 @@ $('.main_slider').on('beforeChange',function(slick, currentSlide, nextSlide){  $
     })
 })
 
-
-function addLink() {
-    var body_element = document.getElementsByTagName('body')[0];
-    var selection = window.getSelection();
-
-    // Вы можете изменить текст в этой строчке
-    var pagelink = "<a href='"+document.location.href+"'>"+document.location.href+"</a>";
-    var copytext = pagelink;
-    var newdiv = document.createElement('div');
-    newdiv.style.position = 'absolute';
-    newdiv.style.left = '-99999px';
-    body_element.appendChild(newdiv);
-    newdiv.innerHTML = copytext;
-    selection.selectAllChildren(newdiv);
-    window.setTimeout( function() {
-        body_element.removeChild(newdiv);
-    }, 0);
-}
-document.oncopy = addLink;
-
-
-
-var message="Function Disabled!";
-function clickIE4(){
-	if (event.button==2){alert(message);return false;}
-}
-function clickNS4(e){
-	if (document.layers||document.getElementById&&!document.all){
-		if (e.which==2||e.which==3){
-			alert(message);return false;
-		}
-	}
-}
-if (document.layers){
-	document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS4;
-}else if (document.all&&!document.getElementById){
-	document.onmousedown=clickIE4;
-}
-document.oncontextmenu=new Function("alert(message);return false")
-$(document).ready(function(){
-	$(document).bind("contextmenu",function(e){    
-		return false;
-		});
-	});
+//
+//function addLink() {
+//    var body_element = document.getElementsByTagName('body')[0];
+//    var selection = window.getSelection();
+//
+//    // Вы можете изменить текст в этой строчке
+//    var pagelink = "<a href='"+document.location.href+"'>"+document.location.href+"</a>";
+//    var copytext = pagelink;
+//    var newdiv = document.createElement('div');
+//    newdiv.style.position = 'absolute';
+//    newdiv.style.left = '-99999px';
+//    body_element.appendChild(newdiv);
+//    newdiv.innerHTML = copytext;
+//    selection.selectAllChildren(newdiv);
+//    window.setTimeout( function() {
+//        body_element.removeChild(newdiv);
+//    }, 0);
+//}
+//document.oncopy = addLink;
 
 
-                
+
+//var message="Function Disabled!";
+//function clickIE4(){
+//	if (event.button==2){alert(message);return false;}
+//}
+//function clickNS4(e){
+//	if (document.layers||document.getElementById&&!document.all){
+//		if (e.which==2||e.which==3){
+//			alert(message);return false;
+//		}
+//	}
+//}
+//if (document.layers){
+//	document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS4;
+//}else if (document.all&&!document.getElementById){
+//	document.onmousedown=clickIE4;
+//}
+//document.oncontextmenu=new Function("alert(message);return false")
+//$(document).ready(function(){
+//	$(document).bind("contextmenu",function(e){    
+//		return false;
+//		});
+//	});
+//
+//
+//                

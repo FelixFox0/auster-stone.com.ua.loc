@@ -84,6 +84,16 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-data">
+              <?php if(isset($category_id)) { ?>  
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-parent">Курс валют:</label>
+               
+                <div class="col-sm-10">
+                  <input type="text" name="kurs" value="" placeholder="" id="input-kurs" class="form-control" />
+                  <!--<p onclick="refresh_kurs($('input[name=\'kurs\']').val(), <?php echo $category_id; ?>)">Пересчитать</p>-->
+                </div>
+              </div>
+              <?php } ?>    
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-parent"><?php echo $entry_parent; ?></label>
                 <div class="col-sm-10">

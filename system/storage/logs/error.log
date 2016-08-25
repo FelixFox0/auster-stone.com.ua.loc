@@ -9479,3 +9479,14 @@ color:black;mso-ansi-language:UK;mso-fareast-language:RU&quot;&gt;&lt;o:p&gt;&lt
 2016-08-09 13:08:41 - PHP Notice:  Undefined index: lastname in /home/austerst/auster-stone.com.ua/www/catalog/controller/checkout/success.php on line 22
 2016-08-09 13:14:06 - PHP Notice:  Undefined index: firstname in /home/austerst/auster-stone.com.ua/www/catalog/controller/checkout/success.php on line 22
 2016-08-09 13:14:06 - PHP Notice:  Undefined index: lastname in /home/austerst/auster-stone.com.ua/www/catalog/controller/checkout/success.php on line 22
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: minimum in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: manufacturer_id in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: points in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: weight in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: weight_class_id in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: length in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: width in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: height in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: length_class_id in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:48 - PHP Notice:  Undefined index: sort_order in C:\OpenServer\domains\auster-stone.com.ua.loc\admin\model\catalog\product.php on line 179
+2016-08-18 10:26:49 - PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\OpenServer\domains\auster-stone.com.ua.loc\admin\index.php:80) in C:\OpenServer\domains\auster-stone.com.ua.loc\system\library\response.php on line 12
